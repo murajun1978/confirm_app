@@ -2,6 +2,7 @@ ConfirmApp::Application.routes.draw do
   resources :hoges do
     collection do
       post :confirm
+      post :search
     end
   end
 

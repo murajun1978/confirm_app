@@ -85,4 +85,12 @@ class HogesController < ApplicationController
   def confirm
     @hoge = Hoge.new(params[:hoge])
   end
+
+  #Search
+  def search
+    items = params[:checked_items].keys
+    @hoges = Hoge.find(items)
+
+    render 'Hoges/index'
+  end
 end

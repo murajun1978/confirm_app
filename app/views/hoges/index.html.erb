@@ -1,7 +1,9 @@
 <h1>Listing hoges</h1>
 
+<%= form_tag (search_hoges_path) do %>
 <table>
   <tr>
+    <th></th>
     <th>Foo</th>
     <th></th>
     <th></th>
@@ -10,6 +12,7 @@
 
 <% @hoges.each do |hoge| %>
   <tr>
+    <td><%= check_box_tag "checked_items[#{hoge.id}]", hoge.id %></td>
     <td><%= hoge.foo %></td>
     <td><%= link_to 'Show', hoge %></td>
     <td><%= link_to 'Edit', edit_hoge_path(hoge) %></td>
@@ -18,6 +21,10 @@
 <% end %>
 </table>
 
+
 <br />
 
 <%= link_to 'New Hoge', new_hoge_path %>
+
+<%= submit_tag 'filter' %>
+<% end %>
