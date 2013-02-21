@@ -1,5 +1,9 @@
 ConfirmApp::Application.routes.draw do
-  resources :hoges
+  resources :hoges do
+    collection do
+      match 'confirm'
+    end
+  end
 
 
   # The priority is based upon order of creation:

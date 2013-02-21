@@ -80,4 +80,9 @@ class HogesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  #Confirm
+  def confirm
+    @hoge = Hoge.new(params[:hoge])
+  end
 end
