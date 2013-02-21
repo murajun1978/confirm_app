@@ -1,6 +1,6 @@
 <h1>Confirm testdb</h1>
 
-<%= form_for @hoge, url: {action: 'create'}, method: :post do |f| %>
+<%= form_for(@hoge) do |f| %>
   <div class="field">
     <%= f.label :foo %>：<%= @hoge.foo %><br />
     <%= f.hidden_field :foo, :readonly => true %>
