@@ -1,7 +1,7 @@
 ConfirmApp::Application.routes.draw do
   resources :hoges do
     collection do
-      match 'confirm'
+      post :confirm
     end
   end
 

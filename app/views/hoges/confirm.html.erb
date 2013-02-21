@@ -3,8 +3,7 @@
 <%= form_for(@hoge) do |f| %>
   <div class="field">
     <%= f.label :foo %>：<%= @hoge.foo %><br />
-    <%= f.hidden_field :foo, :readonly => true %>
-
+    <%= f.hidden_field :foo %>
   </div>
   <div class="actions">
     <%= f.submit 'create' %>
